@@ -11,7 +11,7 @@ class cPDFiDNameObfuscation(cPluginParent):
         self.oPDFiD = oPDFiD
 
     def Score(self):
-        if sum([oCount.hexcode for oCount in self.oPDFiD.keywords.values()]) > 0:
+        if sum(oCount.hexcode for oCount in self.oPDFiD.keywords.values()) > 0:
             return 1.0
         else:
             return 0.0
